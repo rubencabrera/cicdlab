@@ -8,10 +8,6 @@ module.exports = {
     "next",
     "next-major",
     {
-      name: thisBranch,
-      prerelease: true,
-    },
-    {
       name: "beta",
       prerelease: true,
     },
@@ -39,4 +35,5 @@ module.exports = {
     '@semantic-release/release-notes-generator',
     '@semantic-release/github',
   ],
+  tagFormat: "${thisBranch}.${version}",
 };
