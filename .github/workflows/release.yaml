@@ -17,8 +17,8 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@v4
-      with:
-        node-version: 18
+        with:
+          node-version: 18
       - run: npm i dotenv
       - name: Semantic Release
         id: semrel
