@@ -1,10 +1,16 @@
+require('dotenv').config()
 
+thisBranch = process.env.GITHUB_REF_NAME  // testing
 module.exports = {
   branches: [
     "+([0-9])?(.{+([0-9]),x}).x",
     "master",
     "next",
     "next-major",
+    {
+      name: thisBranch,
+      prerelease: true,
+    },
     {
       name: "beta",
       prerelease: true,
