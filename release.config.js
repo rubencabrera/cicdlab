@@ -1,9 +1,9 @@
 require('dotenv').config()
 
-thisBranch = process.env.GITHUB_REF_NAME  // testing
+// thisBranch = process.env.GITHUB_REF_NAME  // testing
 module.exports = {
   branches: [
-    "+([0-9])?(.{+([0-9]),x}).x",
+    "+([0-9])?.([0-1])",
     "master",
     "next",
     "next-major",
