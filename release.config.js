@@ -8,7 +8,6 @@ module.exports = {
       range: "1.x",
       channel: "1.x",
     },
-    "+([0-9])?.([0-1])",
     "master",
     "next",
     "next-major",
