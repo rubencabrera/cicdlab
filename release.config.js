@@ -3,6 +3,11 @@ require('dotenv').config()
 thisBranch = process.env.GITHUB_REF_NAME  // testing
 module.exports = {
   branches: [
+    {
+      name: "9.0",
+      range: "1.x",
+      channel: "1.x",
+    },
     "+([0-9])?.([0-1])",
     "master",
     "next",
