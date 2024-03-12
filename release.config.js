@@ -3,14 +3,14 @@ require('dotenv').config()
 thisBranch = process.env.GITHUB_REF_NAME  // testing
 module.exports = {
   branches: [
-    "+([0-9])?.([0-1])",
+    {
+      name: "9.0",
+      range: "1.x",
+      channel: "1.x",
+    },
     "master",
     "next",
     "next-major",
-    {
-      name: thisBranch,
-      prerelease: true,
-    },
     {
       name: "beta",
       prerelease: true,
@@ -39,4 +39,5 @@ module.exports = {
     '@semantic-release/release-notes-generator',
     '@semantic-release/github',
   ],
+  tagFormat: "${thisBranch}.${version}",
 };
